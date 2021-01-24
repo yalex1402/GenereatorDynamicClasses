@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Generator.CustomTypeBuilder.Entities
 {
+    /// <summary>
+    /// This model describes values to configure every field read
+    /// </summary>
     public class PropertyStructure
     {
         public string Name { get; set; }

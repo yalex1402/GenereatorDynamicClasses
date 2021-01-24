@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Generator.CustomTypeBuilder.Entities
 {
+    /// <summary>
+    /// This model save important configurations of the classes generated
+    /// </summary>
     public class ConfigStructure
     {
         public string Key { get; set; }

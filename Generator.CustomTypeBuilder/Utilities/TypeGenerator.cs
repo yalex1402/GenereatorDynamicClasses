@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Generator.CustomTypeBuilder.Utilities
 {
+    /// <summary>
+    /// This class is configurated to generate any type
+    /// </summary>
     public static class TypeGenerator
     {
         public static Type ConvertToSystemType(string objectType)
