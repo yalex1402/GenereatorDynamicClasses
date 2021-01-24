@@ -56,7 +56,7 @@ namespace Generator.CustomTypeBuilder.Services
             foreach (var item in objects)
             {
                 string name = "";
-                var type = TypeGenerator.ConvertToSystemType(item.tipo.ToString());
+                var type = TypeGenerator.ConvertToSystemType(item.type.ToString());
                 if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>) || type == typeof(object))
                 {
                     name = $"Channel{item.channel.ToString()}";
