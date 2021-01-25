@@ -6,12 +6,12 @@ using System.Text;
 
 namespace Generator.CustomTypeBuilder.Services
 {
-    public static class ClassGeneratorServices
+    public class ClassGeneratorServices
     {
-        public static List<ConfigStructure> SpecificConfig { get; set; }
-        public static List<object> GeneratedClasses { get; set; }
+        public  List<ConfigStructure> SpecificConfig { get; set; }
+        public  List<object> GeneratedClasses { get; set; }
 
-        public static object CreateCustomClass(dynamic objects)
+        public  object CreateCustomClass(dynamic objects)
         {
             SpecificConfig = new List<ConfigStructure>();
             GeneratedClasses = new List<object>();
@@ -50,7 +50,7 @@ namespace Generator.CustomTypeBuilder.Services
             return customMainClass;
         }
 
-        public static object CreateCustomSecondaryClass(dynamic objects, string className, ConfigStructure config)
+        public  object CreateCustomSecondaryClass(dynamic objects, string className, ConfigStructure config)
         {
             var fields = new List<Field>();
             foreach (var item in objects)
@@ -92,7 +92,7 @@ namespace Generator.CustomTypeBuilder.Services
             return customClass;
         }
 
-        private static ConfigStructure CreateConfigStructureInstance(string key, string objectName, string objectType)
+        private  ConfigStructure CreateConfigStructureInstance(string key, string objectName, string objectType)
         {
             return new ConfigStructure()
             {
