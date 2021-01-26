@@ -47,6 +47,7 @@ namespace Generator.CustomTypeBuilder.Services
                 fields.Add(new Field(fieldName, fieldType));
             }
             customMainClass = BuilderServices.CreateNewObject(fields, "MainClass");
+            GeneratedClasses.Add(customMainClass);
             return customMainClass;
         }
 

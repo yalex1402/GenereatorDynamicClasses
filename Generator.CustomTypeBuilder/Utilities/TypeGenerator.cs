@@ -25,6 +25,12 @@ namespace Generator.CustomTypeBuilder.Utilities
                     return typeof(List<>);
                 case "object":
                     return typeof(object);
+                case "BIGINT":
+                    return typeof(long);
+                case "INT":
+                    return typeof(int);
+                case string var when var.Contains("varchar"):
+                    return typeof(string);
                 default:
                     return null;
             }
